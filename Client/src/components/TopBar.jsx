@@ -13,21 +13,18 @@ function TopBar() {
                     <Nav className="ms-auto">
                         <Nav.Link href="/" activeClassName="active"  >Home</Nav.Link>
                         <Nav.Link href="/about" activeClassName="active">About Us</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                        <NavDropdown title="" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
-                                Another action
+                                Contact Us
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                                Separated link
-                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Policy</NavDropdown.Item>
+                            {/* <NavDropdown.Divider /> */}
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar >
+        </Navbar>
     );
 }
 
