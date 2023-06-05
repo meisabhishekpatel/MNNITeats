@@ -1,14 +1,23 @@
 // import { Button } from 'bootstrap';
 import React, { useState } from 'react'
-import { Card, Button, Row, Col } from 'react-bootstrap/esm';
+import { Card, Button, Row, Col, Modal } from 'react-bootstrap/esm';
 
 const Pizza = ({ pizza }) => {
     const [variant, setVariant] = useState('small');
     const [quantity, setQuantity] = useState(1);
+    const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
     return (
         <div>
             <Card style={{ width: '18rem', marginTop: '30px' }}>
-                <Card.Img variant="top" src={pizza.image} />
+                <Card.Img 
+                variant="top" 
+                src={pizza.image}
+                style={{cursor:"pointer"}} 
+                onClick={handleShow}/>
                 <Card.Body>
                     <Card.Title>{pizza.name}</Card.Title>
                     <Card.Text>
@@ -43,6 +52,24 @@ const Pizza = ({ pizza }) => {
 
                 </Card.Body>
             </Card>
+
+            {/* modal */}
+            <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{pizza.name}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+            <div>
+            <Card.Img 
+                variant="top" 
+                src={pizza.image}/>
+            </div>
+            <div>
+                <h5>Description:</h5>
+                <h6>{pizza.description}</h6>
+            </div>
+        </Modal.Body>
+      </Modal>
         </div>
     )
 }
