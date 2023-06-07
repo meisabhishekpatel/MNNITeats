@@ -1,23 +1,30 @@
 // import { Button } from 'bootstrap';
 import React, { useState } from 'react'
 import { Card, Button, Row, Col, Modal } from 'react-bootstrap/esm';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../actions/cartAction';
 
 const Pizza = ({ pizza }) => {
     const [variant, setVariant] = useState('small');
     const [quantity, setQuantity] = useState(1);
     const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+    const dispatch = useDispatch();
+    const addToCartHandler = () => {
+        dispatch(addToCart(pizza, quantity, variant))
+    }
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
         <div>
             <Card style={{ width: '18rem', marginTop: '30px' }}>
-                <Card.Img 
-                variant="top" 
-                src={pizza.image}
-                style={{cursor:"pointer"}} 
-                onClick={handleShow}/>
+                <Card.Img
+                    variant="top"
+                    src={pizza.image}
+                    style={{ cursor: "pointer" }}
+                    onClick={handleShow} />
                 <Card.Body>
                     <Card.Title>{pizza.name}</Card.Title>
                     <Card.Text>
@@ -46,7 +53,9 @@ const Pizza = ({ pizza }) => {
                         </Col>
 
                         <Col md={6}>
-                            <Button className="bg-warning text-white">Add to Cart</Button>
+                            <Button
+                                onClick={addToCartHandler}
+                                className="bg-warning text-white">Add to Cart</Button>
                         </Col>
                     </Row>
 
@@ -55,21 +64,21 @@ const Pizza = ({ pizza }) => {
 
             {/* modal */}
             <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>{pizza.name}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-            <div>
-            <Card.Img 
-                variant="top" 
-                src={pizza.image}/>
-            </div>
-            <div>
-                <h5>Description:</h5>
-                <h6>{pizza.description}</h6>
-            </div>
-        </Modal.Body>
-      </Modal>
+                <Modal.Header closeButton>
+                    <Modal.Title>{pizza.name}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <div>
+                        <Card.Img
+                            variant="top"
+                            src={pizza.image} />
+                    </div>
+                    <div>
+                        <h5>Description:</h5>
+                        <h6>{pizza.description}</h6>
+                    </div>
+                </Modal.Body>
+            </Modal>
         </div>
     )
 }
