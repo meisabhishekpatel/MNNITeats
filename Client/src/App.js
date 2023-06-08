@@ -8,6 +8,8 @@ import Policy from './components/Policy';
 import NavBar from './components/NavBar';
 import HomeScreen from './screens/HomeScreen';
 import CartScreen from './screens/CartScreen';
+import Register from './screens/Register';
+import Login from './screens/Login';
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +19,8 @@ function App() {
       </div>
       <Routes>
       <Route path="/cart" element={<CartScreen />} />
+      <Route path="/register" element={<Register/>} />
+      <Route path="/login" element={<Login/>} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/policy" element={<Policy />} />

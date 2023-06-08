@@ -17,6 +17,7 @@ function NavBar() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link href='/login'>Login</Nav.Link>
+                        <Nav.Link href='/register'>Register</Nav.Link>
                         <Nav.Link href='/cart'>Cart {cartState.cartItems.length}</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
