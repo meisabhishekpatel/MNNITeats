@@ -10,6 +10,7 @@ import HomeScreen from './screens/HomeScreen';
 import CartScreen from './screens/CartScreen';
 import Register from './screens/Register';
 import Login from './screens/Login';
+import AdminScreen from './screens/AdminScreen';
 function App() {
   return (
     <BrowserRouter>
@@ -19,6 +20,7 @@ function App() {
       </div>
       <Routes>
       <Route path="/cart" element={<CartScreen />} />
+      <Route path="/admin" element={<AdminScreen />} />
       <Route path="/register" element={<Register/>} />
       <Route path="/login" element={<Login/>} />
         <Route path="/about" element={<About />} />
