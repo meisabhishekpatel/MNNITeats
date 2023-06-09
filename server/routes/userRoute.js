@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const userModel = require("../models/userModel");
+const User= require("../models/userModel");
 
 
 router.post("/register", async (req, res) => {
@@ -8,20 +8,20 @@ router.post("/register", async (req, res) => {
     const newUser=new User ({name,email,password})
     try {
         newUser.save().then(() => {
-            console.log('USER added to DB.');
-            res.redirect('/');
+            console.log('User added to DB.');
+            res.redirect([200],"/");
           })
          
           .catch(err => {
             res.status(400).send("Unable to save user to database.");
           });
       
-        res.status(200).json({
-            success:true,
-            message:'Register success'
-        })
+        // res.status(200).json({
+        //     success:true,
+        //     message:'Register success'
+        // })
     } catch (error) {
-        res.status(400).json({ message: error });
+        res.status(400).json({ message: (error) });
     }
 });
 
@@ -29,7 +29,7 @@ router.post("/login", async (req, res) => {
     const {email,password}=req.body
 
     try {
-        const user = await userModel.find({email,password})
+        const user = await User.find({email,password})
         if(user.length > 0){
             const currentUser={
                 name:user[0].name,
