@@ -17,7 +17,10 @@ const Register = () => {
     }
     else{
       const user = {name, email, password, confirmPassword};
+    
       dispatch(registerUser(user));
+      window.location.href="/login"
+
     }
   }
   return (

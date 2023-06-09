@@ -9,7 +9,10 @@ router.post("/register", async (req, res) => {
     try {
         newUser.save().then(() => {
             console.log('User added to DB.');
-            res.redirect([200],"/");
+           res.status(200).json({
+            sucess:true,
+            message: 'Registeration sucessful'
+           })
           })
          
           .catch(err => {
