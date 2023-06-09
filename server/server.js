@@ -4,6 +4,9 @@ const connectDB = require('./config/config');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 require('colors');
+// Set your secret key. Remember to switch to your live secret key in production.
+// See your keys here: https://dashboard.stripe.com/apikeys
+
 
 dotenv.config()
 const app = express();
@@ -13,8 +16,10 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 //route
-app.use('/api/pizzas', require("./routes/pizzaRoute"))
-app.use('/api/users', require("./routes/userRoute"))
+
+app.use('/api/pizzas', require("./routes/pizzaRoute"));
+app.use('/api/users', require("./routes/userRoute"));
+app.use('/api/orders', require("./routes/orderRoute"));
 app.get("/", (req, res) => {
     res.send("<h1>Hello from node server via nodemon</h1>");
 });

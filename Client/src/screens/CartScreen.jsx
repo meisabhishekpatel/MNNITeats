@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 import { useSelector, useDispatch } from 'react-redux'
 import { FaMinusSquare, FaPlusSquare, FaTrash } from 'react-icons/fa'
 import { addToCart, deleteFromCart } from '../actions/cartAction'
+import Checkout from '../components/Checkout'
 
 
 const CartScreen = () => {
@@ -62,7 +63,7 @@ const CartScreen = () => {
                         <h1>Payment</h1>
                         <h4>SubTotal:</h4>
                         <h4>RS {subTotal} </h4>
-                        <Button>Checkout</Button>
+                        <Checkout subTotal={subTotal}/>
                     </Col>
                 </Row>
             </Container>
