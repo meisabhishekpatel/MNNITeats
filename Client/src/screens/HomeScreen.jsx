@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-// import Allpizza from '../pizzadata.js'
+
 import { useDispatch, useSelector } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap'
 import Pizza from '../components/Pizza.jsx';

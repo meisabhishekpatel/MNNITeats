@@ -19,10 +19,10 @@ function App() {
         <NavBar />
       </div>
       <Routes>
-        <Route path="/cart" element={<CartScreen />} />
-        <Route path="/admin/*" element={<AdminScreen />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+      <Route path="/admin/*" element={<AdminScreen />} />
+      <Route path="/cart" element={<CartScreen />} />
+      <Route path="/register" element={<Register/>} />
+      <Route path="/login" element={<Login/>} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/policy" element={<Policy />} />
