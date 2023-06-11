@@ -11,6 +11,8 @@ import CartScreen from './screens/CartScreen';
 import Register from './screens/Register';
 import Login from './screens/Login';
 import AdminScreen from './screens/AdminScreen';
+import OrderScreen from './screens/OrderScreen';
+
 function App() {
   return (
     <BrowserRouter>
@@ -19,14 +21,15 @@ function App() {
         <NavBar />
       </div>
       <Routes>
-      <Route path="/admin/*" element={<AdminScreen />} />
-      <Route path="/cart" element={<CartScreen />} />
-      <Route path="/register" element={<Register/>} />
-      <Route path="/login" element={<Login/>} />
+        <Route path="/admin/*" element={<AdminScreen />} />
+        <Route path="/cart" element={<CartScreen />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/policy" element={<Policy />} />
         <Route path="/" element={<HomeScreen />} />
+        <Route path="/orders" element={<OrderScreen />} />
       </Routes>
     </BrowserRouter>
 
