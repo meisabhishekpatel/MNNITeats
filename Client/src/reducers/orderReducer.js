@@ -17,3 +17,23 @@ export const placeOrderReducer = (state = {}, action) => {
         default: return state;
     }
 };
+export const allUserOdersReducer = (state = {orders:[]}, action) => {
+    switch (action.type) {
+        case 'ALL_ORDER_REQUEST':
+            return {
+                ...state, loading: true
+            };
+        case 'ALL_ORDER_SUCCESS':
+            return {
+                loading: false,
+                success: true,
+                orders:action.payload,
+            };
+        case 'PLACE_ORDER_FAIL':
+            return {
+                loading: false,
+                error: action.payload
+            };
+        default: return state;
+    }
+};

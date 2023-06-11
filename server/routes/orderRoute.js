@@ -35,6 +35,36 @@ router.post('/placeorder', async (req,res)=>{
         });
     }
 });
+
+router.get("/alluserorder",async(req,res)=>{
+    try{
+        const orders=await Order.find({});
+        res.status(200).send(orders);
+    }catch(error){
+        res.status(400).json({
+            message:"Something Went Wrong",
+            error:error.stack,
+        });
+    }
+    
+});
+
+router.post("/deliverorder",async(req,res)=>{
+    try{
+
+        const orderid=req.body.orderid
+        const order=await Order.findOne({_id:orderid});
+        order.isDelivered=true;
+         await order.save()
+        res.status(200).send('Oder delivered successfully');
+    }catch(error){
+        res.status(400).json({
+            message:"Something Went Wrong",
+            error:error.stack,
+        });
+    }
+    
+});
 module.exports = router;
 
 
