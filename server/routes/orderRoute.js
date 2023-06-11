@@ -83,7 +83,7 @@ router.post("/deliverorder", async (req, res) => {
         const order = await Order.findOne({ _id: orderid });
         order.isDelivered = true;
         await order.save()
-        res.status(200).send('Oder delivered successfully');
+        res.status(200).send('Order delivered successfully');
     } catch (error) {
         res.status(400).json({
             message: "Something Went Wrong",

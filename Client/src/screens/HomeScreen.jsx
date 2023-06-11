@@ -6,6 +6,7 @@ import Pizza from '../components/Pizza.jsx';
 import { getAllPizzas } from '../actions/pizzaAction.js';
 import Loader from '../components/Loader.jsx';
 import Error from '../components/Error.jsx';
+import Filters from '../components/Filters.jsx';
 
 function HomeScreen() {
     const dispatch = useDispatch();
@@ -18,9 +19,10 @@ function HomeScreen() {
                 {
                     loading ? (<Loader />)
                         : error ? (<Error>Error while fetching pizzas</Error>)
-                        :
-                         
+                            :
+
                             (< Row >
+                                <Filters />
                                 {
                                     pizzas.map(pizza => (
                                         <Col md={4} >
