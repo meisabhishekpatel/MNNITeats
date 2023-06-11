@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {Table} from 'react-bootstrap';
-import { getAllUsers } from '../../actions/userAction';
+import { deleteUser, getAllUsers } from '../../actions/userAction';
 import Loader from './../Loader';
 import Error from './../Error';
+import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
 
 const UserList = () => {
   const userState = useSelector(state => state.getAllUsersReducer)
@@ -33,6 +34,10 @@ const UserList = () => {
           <td>{user._id}</td>
           <td>{user.name}</td>
           <td>{user.email}</td>
+          <td><AiFillDelete
+                    style={{ color: 'red', cursor: 'pointer' }}
+                    onClick={() => {dispatch(deleteUser(user._id))}}
+         /></td>
         </tr>
        ))}
       </tbody>

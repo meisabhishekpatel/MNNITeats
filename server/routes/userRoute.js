@@ -60,4 +60,13 @@ router.get("/getallusers", async (req, res) => {
     }
 });
 
+router.post('/deleteuser', async(req, res) => {
+    const userid = req.body.userid
+    try{
+        await User.findOneAndDelete({_id:userid})
+        res.status(200).send('User Deleted')
+    } catch(error){
+        res.status(404).json({message:error.stack})
+    }
+})
 module.exports = router
