@@ -1,19 +1,21 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import "../App.css";
 
 const policy = () => {
   return (
     <>
-      <Container style={{ marginTop: '50px' }}>
-        <h1>Terms and Policy</h1>
-         <p>At [Your Company Name], we are committed to protecting the privacy and security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard the data you provide to us. By using our website or services, you consent to the practices described below.</p>
+      
+      <Container style={{ marginTop: '50px',backgroundColor: "#272D2F" }}>
+        <h1 style={{color:"#FFC520"}}>Terms and Policy</h1>
+         <p class="para">At MNNITeats, we are committed to protecting the privacy and security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard the data you provide to us. By using our website or services, you consent to the practices described below.</p>
     
         <Row>
           <Col md={10}>
             <h6>Information Collection:</h6>
-            <p>We may collect personal information such as your name, email address, phone number, and billing/shipping address when you interact with our website, make a purchase, or contact our customer support. Additionally, we may collect non-personal information such as IP addresses, browser types, and website usage statistics through cookies and similar technologies.</p>
+            <p class="para">We may collect personal information such as your name, email address, phone number, and billing/shipping address when you interact with our website, make a purchase, or contact our customer support. Additionally, we may collect non-personal information such as IP addresses, browser types, and website usage statistics through cookies and similar technologies.</p>
             <h6>Use of Information:</h6>
-            <p>We use the collected information to:<br/>
+            <p class>We use the collected information to:<br/>
 
                 1. Provide and improve our products and services.<br/>
                 2. Process your orders and transactions.<br/>

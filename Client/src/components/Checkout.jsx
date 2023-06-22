@@ -18,7 +18,7 @@ const Checkout = ({ subTotal }) => {
     <>
       {loading && (<Loader />)}
       {error && (<Error error="something went worng" />)}
-      {success && (<Success success="order successfull" />)}
+      {success && (<Success success="Order Successfull" />)}
       < StripeCheckout
         amount={subTotal * 100}
         shippingAddress
@@ -26,7 +26,7 @@ const Checkout = ({ subTotal }) => {
         stripeKey='pk_test_51NH2cbSA65ARtDa4x6X4onobNXy5dM2RvVww4wPCa6esJmnkGJW9NpfmmPm081turGvrvcY0NgrjCznOrv5MpHsr00OkEsO4G2'
         currency='INR'
       >
-        <Button>Pay Now</Button>
+        <Button style={{backgroundColor:"#FFC529", border:"solid 1px black",color:"black"}}>Pay Now</Button>
       </StripeCheckout >
     </>
   );

@@ -5,16 +5,16 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function TopBar() {
     return (
-        <Navbar bg="dark" variant='dark' expand="lg">
-            <Container>
-                <Navbar.Brand href="/">MNNITeats</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto">
-                        <Nav.Link href="/" activeClassName="active"  >Home</Nav.Link>
-                        <Nav.Link href="/about" activeClassName="active">About Us</Nav.Link>
-                        <NavDropdown title="" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+        <Navbar bg="#FFC529" variant='dark' expand="lg" style={{backgroundColor:"#FFC529"}}>
+            <Container style={{backgroundColor:"#FFC529"}}>
+                <Navbar.Brand href="/"style={{backgroundColor:"#FFC529"}}>MNNITeats</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav"style={{backgroundColor:"#FFC529"}} />
+                <Navbar.Collapse id="basic-navbar-nav"style={{backgroundColor:"#FFC529"}}>
+                    <Nav className="ms-auto"style={{backgroundColor:"#FFC529"}}>
+                        <Nav.Link href="/" activeClassName="active"style={{backgroundColor:"#FFC529"}}  >Home</Nav.Link>
+                        <Nav.Link href="/about" activeClassName="active" style={{backgroundColor:"#FFC529"}}>About Us</Nav.Link>
+                        <NavDropdown title="" id="basic-nav-dropdown" style={{backgroundColor:"#FFC529"}}>
+                            <NavDropdown.Item href="#action/3.1"style={{backgroundColor:"#FFC529"}}>Action</NavDropdown.Item>
                             <NavDropdown.Item href="/contact">
                                 Contact Us
                             </NavDropdown.Item>

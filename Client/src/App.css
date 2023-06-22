@@ -1,0 +1,22 @@
+h1{
+    color:#FFC520;
+}
+p{
+    color:white;
+    font-family: "DM Sans";
+}
+h6{
+    color:#FFC520;
+}
+.image{
+    border: solid 100px blue;
+}
+*{
+    background-color: #272D2F;
+}
+td{
+    color: #FFC529;
+}
+h5,h4{
+    color:#FFC529;
+}

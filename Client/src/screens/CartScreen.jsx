@@ -45,7 +45,7 @@ const CartScreen = () => {
 
                                         </Col>
                                         <Col md={5}>
-                                            <img alt={item.name} src={item.image} style={{ width: '150px', height: '80px' }} />
+                                            <img alt={item.name} src={item.image} style={{ width: '150px', height: '80px',border:"solid 2px #FFC529" }} />
                                             <FaTrash className="text-danger"
                                                 style={{ cursor: "pointer", marginLeft: "20px" }}
                                                 onClick={() => {

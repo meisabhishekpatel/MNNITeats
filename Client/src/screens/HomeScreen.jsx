@@ -15,7 +15,7 @@ function HomeScreen() {
     useEffect(() => { dispatch(getAllPizzas()) }, [dispatch])
     return (
         <div>
-            <Container>
+            <Container >
                 {
                     loading ? (<Loader />)
                         : error ? (<Error>Error while fetching pizzas</Error>)
@@ -25,7 +25,7 @@ function HomeScreen() {
                                 <Filters />
                                 {
                                     pizzas.map(pizza => (
-                                        <Col md={4} >
+                                        <Col md={4}  >
                                             <Pizza pizza={pizza} />
                                         </Col>
                                     ))

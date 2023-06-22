@@ -19,29 +19,29 @@ const Pizza = ({ pizza }) => {
 
     return (
         <div>
-            <Card style={{ width: '18rem', marginTop: '30px' }}>
+            <Card style={{ width: '18rem', marginTop: '30px',border:"solid #FFC529" }}>
                 <Card.Img
                     variant="top"
                     src={pizza.image}
                     style={{ cursor: "pointer" }}
                     onClick={handleShow} />
                 <Card.Body>
-                    <Card.Title>{pizza.name}</Card.Title>
+                    <Card.Title style={{color:"#FFC529"}}>{pizza.name}</Card.Title>
                     <Card.Text>
                         <Row>
                             <Col md={6}>
                                 <h6>Variant</h6>
-                                <select value={variant} onChange={e => setVariant(e.target.value)}>
+                                <select value={variant} onChange={e => setVariant(e.target.value)} style={{backgroundColor:"#FFC529",border:"solid 1px"}} >
                                     {pizza.variants.map((variant) => (
-                                        <option >{variant}</option>
+                                        <option style={{backgroundColor:"#FFC529"}}>{variant}</option>
                                     ))}
                                 </select>
                             </Col>
                             <Col md={6}>
                                 <h6>Quantity</h6>
-                                <select value={quantity} onChange={e => setQuantity(e.target.value)}>
+                                <select value={quantity} onChange={e => setQuantity(e.target.value)} style={{backgroundColor:"#FFC529",border:"solid 1px"}} >
                                     {[...Array(10).keys()].map((v, i) => (
-                                        <option  > {i + 1}</option>
+                                        <option  style={{backgroundColor:"#FFC529"}}> {i + 1}</option>
                                     ))}
                                 </select>
                             </Col>
@@ -49,13 +49,13 @@ const Pizza = ({ pizza }) => {
                     </Card.Text>
                     <Row>
                         <Col md={6}>
-                            <Button className="bg-white text-black">Price: {pizza.prices[0][variant] * quantity}</Button>
+                            <Button className="bg-warning text-black" style={{border:"solid 1px"}}>Price: {pizza.prices[0][variant] * quantity}</Button>
                         </Col>
 
                         <Col md={6}>
-                            <Button
+                            <Button style={{border:"solid 1px"}}
                                 onClick={addToCartHandler}
-                                className="bg-warning text-white">Add to Cart</Button>
+                                className="bg-warning text-black">Add to Cart</Button>
                         </Col>
                     </Row>
 

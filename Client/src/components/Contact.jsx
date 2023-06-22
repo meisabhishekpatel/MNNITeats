@@ -3,11 +3,12 @@ import {Container, Row, Col, Table, Image} from 'react-bootstrap'
 import{FiPhoneCall} from "react-icons/fi";
 import{ImMobile} from "react-icons/im";
 import{CiMail} from "react-icons/ci";
+import "../App.css"
 
 const Contact = () => {
   return (
     <>
-      <Container style={{marginTop:'50px'}}>
+      <Container style={{marginTop:'50px',backgroundColor: "#272D2F"}}>
         <Row>
             <Col md={6}>
                 <h1>MNNITEats</h1>
@@ -19,27 +20,27 @@ const Contact = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><FiPhoneCall /></td>
-          <td>Phone</td>
-          <td>0123-456789</td>
+        <tr className="text-warning">
+          <td style={{color:"#FFC529"}}><FiPhoneCall /></td>
+          <td style={{color:"#FFC529"}}>Phone</td>
+          <td style={{color:"#FFC529"}}>0123-456789</td>
         </tr>
-        <tr>
-          <td><ImMobile /></td>
-          <td>Call</td>
-          <td>1234567890</td>
+        <tr class="warning">
+          <td class="warning"style={{color:"#FFC529"}}><ImMobile /></td>
+          <td color="warning"style={{color:"#FFC529"}}>Call</td>
+          <td style={{color:"#FFC529"}}>1234567890</td>
         </tr>
-        <tr>
-          <td><CiMail /></td>
-          <td>Email</td>
-          <td>Help@urdomain.com</td>
+        <tr class="warning" style={{color:"#FFC529"}}>
+          <td style={{color:"#FFC529"}}><CiMail /></td>
+          <td style={{color:"#FFC529"}}>Email</td>
+          <td style={{color:"#FFC529"}}>Help@urdomain.com</td>
         </tr>
       </tbody>
     </Table>
             </Col>
            
             <Col md={6}>
-            <Image src="images/farmhouse.jfif" style={{width:'100%', height:'100%'}} />
+            <Image class="image" src="images/farmhouse.jfif" style={{width:'100%', height:'100%',border:"solid 10px"}} />
             </Col>
         </Row>
       </Container>

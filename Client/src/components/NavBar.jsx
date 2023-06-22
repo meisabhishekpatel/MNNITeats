@@ -12,7 +12,7 @@ function NavBar() {
     const userState = useSelector((state) => state.loginUserReducer);
     const { currentUser } = userState;
     return (
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect expand="lg" bg="#808080" variant="dark">
             <Container>
                 <Navbar.Brand href="/">
                     <Image src='/images/logo.png' style={{ height: '80px' }} />

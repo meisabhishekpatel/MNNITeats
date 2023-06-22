@@ -1,12 +1,12 @@
 const pizzas = [
     {
         name: "Margherita",
-        variants: ["small", "medium", "large"],
+        variants: ["Small", "Medium", "Large"],
         prices: [
             {
-                small: 99,
-                medium: 199,
-                large: 399,
+                Small: 99,
+                Medium: 199,
+                Large: 399,
             },
         ],
         category: "veg",
@@ -15,12 +15,12 @@ const pizzas = [
     },
     {
         name: "Farmhouse",
-        variants: ["small", "medium", "large"],
+        variants: ["Small", "Medium", "large"],
         prices: [
             {
-                small: 229,
-                medium: 399,
-                large: 599,
+                Small: 229,
+                Medium: 399,
+                Large: 599,
             },
         ],
         category: "veg",
