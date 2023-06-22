@@ -15,10 +15,10 @@ function TopBar() {
                         <Nav.Link href="/about" activeClassName="active">About Us</Nav.Link>
                         <NavDropdown title="" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
+                            <NavDropdown.Item href="/contact">
                                 Contact Us
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Policy</NavDropdown.Item>
+                            <NavDropdown.Item href="/Policy">Policy</NavDropdown.Item>
                             {/* <NavDropdown.Divider /> */}
                         </NavDropdown>
                     </Nav>
