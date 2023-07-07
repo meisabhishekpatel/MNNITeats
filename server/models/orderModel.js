@@ -22,6 +22,10 @@ const orderSchema = mongoose.Schema({
         type: String,
         // required: true
     },
+    store: {
+        type: String,
+        required: true
+    },
     isDelivered: {
         type: Boolean,
         default: false

@@ -31,6 +31,7 @@ router.post('/placeorder', async (req, res) => {
                 userid: currentUser._id,
                 orderItems: cartItems,
                 orderAmount: subTotal,
+                store: currentUser.store,
                 shippingAddress: {
                     street: token.card.address_line1,
                     city: token.card.address_city,

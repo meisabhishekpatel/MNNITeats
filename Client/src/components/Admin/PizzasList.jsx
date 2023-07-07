@@ -27,6 +27,7 @@ const PizzasList = () => {
                     <th>Pizza Name</th>
                     <th>Prices</th>
                     <th>Category</th>
+                    <th>Store</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -43,6 +44,7 @@ const PizzasList = () => {
                           Large : {pizza.prices[0]["large"]}
                         </td>
                         <td>{pizza.category}</td>
+                        <td>{pizza.store}</td>
                         <td>
                           <Link to={`/admin/editpizza/${pizza._id}`}>
                             <AiFillEdit style={{ cursor: 'pointer' }} />

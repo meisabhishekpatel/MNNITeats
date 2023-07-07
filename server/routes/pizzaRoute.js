@@ -19,6 +19,7 @@ router.post("/addpizza", async (req, res) => {
             name: pizza.name,
             image: pizza.image,
             variants: ['small', 'medium', 'large'],
+            store: pizza.store,
             description: pizza.description,
             category: pizza.category,
             prices: [pizza.prices]
@@ -46,6 +47,7 @@ router.post("/updatepizza", async (req, res) => {
         (pizza.name = updatedPizza.name),
             (pizza.description = updatedPizza.description),
             (pizza.image = updatedPizza.image),
+            (pizza.store = updatedPizza.store),
             (pizza.category = updatedPizza.category),
             (pizza.prices = [updatedPizza.prices]);
         await pizza.save();

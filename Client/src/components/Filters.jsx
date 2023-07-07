@@ -14,28 +14,28 @@ const Filters = () => {
                 <Row  >
                     <Col>
                         <Form.Control
-                        style={{backgroundColor:"#FFC529",border:"solid black"}}
+                            style={{ backgroundColor: "#FFC529", border: "solid black" }}
                             value={searchkey}
                             onChange={(e) => setsearchkey(e.target.value)}
-                            placeholder="Search Pizza"
+                            placeholder="Search Item"
 
                         />
                     </Col>
                     <Col>
                         <select
 
-                        style={{backgroundColor:"#FFC529",border:"solid black"}}
+                            style={{ backgroundColor: "#FFC529", border: "solid black" }}
                             className="form-select"
                             value={category}
                             onChange={(e) => setcategory(e.target.value)}
                         >
-                            <option style={{color:"#FFC529"}}>All</option>
-                            <option style={{color:"#FFC529"}}>Veg</option>
-                            <option style={{color:"#FFC529"}}>Non-Veg</option>
+                            <option style={{ color: "#FFC529" }}>All</option>
+                            <option style={{ color: "#FFC529" }}>Veg</option>
+                            <option style={{ color: "#FFC529" }}>Non-Veg</option>
                         </select>
                     </Col>
                     <Col>
-                        <Button style={{backgroundColor:"#FFC529",border:"solid black"}}
+                        <Button style={{ backgroundColor: "#FFC529", border: "solid black" }}
                             onClick={() => {
                                 dispatch(filterPizza(searchkey, category));
                             }}

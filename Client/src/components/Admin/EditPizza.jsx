@@ -14,6 +14,7 @@ export const EditPizza = () => {
     const [mediumPrice, setmediumPrice] = useState()
     const [image, setimage] = useState('')
     const [description, setdescription] = useState('')
+    const [store, setstore] = useState('')
     const [category, setcategory] = useState('')
     const { pizzaId } = useParams();
     const dispatch = useDispatch();
@@ -26,6 +27,7 @@ export const EditPizza = () => {
             if (pizza._id === pizzaId) {
                 setname(pizza.name);
                 setdescription(pizza.description);
+                setstore(pizza.store);
                 setcategory(pizza.category);
                 setimage(pizza.image);
                 setsmallPrice(pizza.prices[0]["small"]);
@@ -44,7 +46,7 @@ export const EditPizza = () => {
         e.preventDefault();
         const updatedpizza = {
             _id: pizzaId,
-            name, image, description, category,
+            name, image, description, category, store,
             prices: {
                 small: smallPrice,
                 medium: mediumPrice,
@@ -113,6 +115,14 @@ export const EditPizza = () => {
                         value={description}
                         onChange={e => setdescription(e.target.value)}
                         placeholder="Enter Description" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGridAddress1">
+                    <Form.Label>Description</Form.Label>
+                    <Form.Control
+                        type="text"
+                        value={store}
+                        onChange={e => setstore(e.target.value)}
+                        placeholder="Enter Store Name" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formGridAddress2">

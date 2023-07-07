@@ -12,6 +12,7 @@ const AddNewPizza = () => {
   const [mediumPrice, setmediumPrice] = useState()
   const [image, setimage] = useState('')
   const [description, setdescription] = useState('')
+  const [store, setstore] = useState('')
   const [category, setcategory] = useState('')
   const addPizzaState = useSelector(state => state.addPizzaReducer)
   const { loading, error, success } = addPizzaState;
@@ -20,7 +21,7 @@ const AddNewPizza = () => {
   const submitForm = (e) => {
     e.preventDefault();
     const pizza = {
-      name, image, description, category,
+      name, image, description, category, store,
       prices: {
         small: smallPrice,
         medium: mediumPrice,
@@ -89,6 +90,14 @@ const AddNewPizza = () => {
             value={description}
             onChange={e => setdescription(e.target.value)}
             placeholder="Enter Description" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formGridAddress1">
+          <Form.Label>Store</Form.Label>
+          <Form.Control
+            type="text"
+            value={store}
+            onChange={e => setstore(e.target.value)}
+            placeholder="Enter store name" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formGridAddress2">

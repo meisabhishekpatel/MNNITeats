@@ -6,6 +6,10 @@ const pizzaSchema = mongoose.Schema({
         required: true
     },
     variants: [],
+    store: {
+        type: String,
+        required: true
+    },
     prices: [],
     category: {
         type: String,
