@@ -28,19 +28,20 @@ const pizzas = [
             "Healthy option for protein lovers",
     },
     {
-        name: "Coffee",
+       
+        name: "Tea",
         variants: ["small", "medium", "large"],
         prices: [
             {
                 small: 10,
                 medium: 15,
-                large: 25,
+                large: 20,
             },
         ],
         category: "Drink",
+        image: "/images/tea",
         description:
-            "Caters your caffeine needs for sure",
-        image: "/images/coffee.jpg",
+            "Freshen up your mood with a sip of tea",
     },
     {
         name: "Sandwich",
@@ -73,19 +74,19 @@ const pizzas = [
             "A healthy and fulfilling option to grab",
     },
     {
-        name: "Tea",
+        name: "Coffee",
         variants: ["small", "medium", "large"],
         prices: [
             {
                 small: 10,
                 medium: 15,
-                large: 20,
+                large: 25,
             },
         ],
         category: "Drink",
-        image: "/images/tea",
         description:
-            "Freshen up your mood with a sip of tea",
+            "Caters your caffeine needs for sure",
+        image: "/images/coffee.jpg",
     },
 ];
 export default pizzas;
