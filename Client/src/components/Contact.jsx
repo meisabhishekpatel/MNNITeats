@@ -11,9 +11,9 @@ const Contact = () => {
       <Container style={{marginTop:'50px',backgroundColor: "#272D2F"}}>
         <Row>
             <Col md={6}>
-                <h1>MNNITEats</h1>
-                <p>We're here to assist you and answer any questions or concerns you may have. Please feel free to reach out to us using any of the methods below. We strive to provide prompt and helpful responses to all inquiries.</p>
-    <Table striped bordered hover className="text-center">
+                <h2 style={{ color: "#FFC529", textAlign: "center",  fontFamily: "cursive", fontWeight: "bold", padding: "10px"}}>MNNITEats</h2>
+                <p style={{color: "", fontFamily: "cursive", fontWeight: "bold"}}>We're here to assist you and answer any questions or concerns you may have. Please feel free to reach out to us using any of the methods below. We strive to provide prompt and helpful responses to all inquiries.</p>
+    <Table striped bordered hover className="text-center" style={{padding: "10px"}}>
       <thead>
         <tr>
           <th className="bg-warning text-center" colSpan={3}>--- Contact Details ---</th>

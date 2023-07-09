@@ -12,19 +12,26 @@ function NavBar() {
     const userState = useSelector((state) => state.loginUserReducer);
     const { currentUser } = userState;
     return (
-        <Navbar collapseOnSelect expand="lg" bg="#808080" variant="dark">
-            <Container>
+        <Navbar collapseOnSelect expand="lg" variant="dark">
+            <Container >
                 <Navbar.Brand href="/">
-                    <Image src='/images/logo.png' style={{ height: '80px' }} />
+                    <Image src='/images/logo2.png' style={{height : "100px", paddingLeft: "20px", paddingTop: "2px"}} />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="ms-auto">
+                    <Nav className="mx-auto" style={{border: "2px", borderColor: "#FFC529"}}>
+                    <Nav.Link href="/" activeClassName="active"style={{ color: "#FFC529", fontSize: "16px",fontFamily: "cursive", fontWeight: "bold", paddingLeft: "30px", paddingRight:"30px"}}  >Home</Nav.Link>
+                        <Nav.Link href="/about" activeClassName="active" style={{ color: "#FFC529", fontSize: "16px",fontFamily: "cursive", fontWeight: "bold", paddingLeft: "30px", paddingRight:"30px", paddingTop: "10px", paddingBottom: "30px"}}>About Us</Nav.Link>
+                        <Nav.Link href="#action/3.1" activeClassName="active" style={{ color: "#FFC529", fontSize: "16px",fontFamily: "cursive", fontWeight: "bold", paddingLeft: "30px", paddingRight:"30px"}}>Action</Nav.Link>
+                        <Nav.Link href="/contact" activeClassName="active" style={{ color: "#FFC529", fontSize: "16px",fontFamily: "cursive", fontWeight: "bold", paddingLeft: "30px", paddingRight:"30px"}}>Contact</Nav.Link>
+                        <Nav.Link href="/Policy" activeClassName="active" style={{ color: "#FFC529", fontSize: "16px",fontFamily: "cursive", fontWeight: "bold", paddingLeft: "30px", paddingRight:"30px"}}>Policy</Nav.Link>
+                        
+                        <Nav.Link href='/cart'style={{ color: "#FFC529", fontSize: "16px",fontFamily: "cursive", fontWeight: "bold", paddingLeft: "30px", paddingRight:"30px"}}>Cart {cartState.cartItems.length}</Nav.Link>
                         {currentUser ? (<LinkContainer to="/">
                             {/* <Nav.Link>{currentUser.name}</Nav.Link> */}
-                            <NavDropdown title={currentUser.name} id="basic-nav-dropdown">
+                            <NavDropdown className="ms-auto" title={currentUser.name}  id="basic-nav-dropdown">
                                 <LinkContainer to="/orders">
-                                    <NavDropdown.Item >Order</NavDropdown.Item>
+                                    <NavDropdown.Item>Order</NavDropdown.Item>
                                 </LinkContainer>
                                 <NavDropdown.Item onClick={dispatch(logoutUser)}>
                                     Logout
@@ -39,8 +46,7 @@ function NavBar() {
                                     <LinkContainer to="register/">
                                         <Nav.Link>Register</Nav.Link></LinkContainer>
                                 </>)}
-
-                        <Nav.Link href='/cart'>Cart {cartState.cartItems.length}</Nav.Link>
+                                
                     </Nav>
                 </Navbar.Collapse>
             </Container>
