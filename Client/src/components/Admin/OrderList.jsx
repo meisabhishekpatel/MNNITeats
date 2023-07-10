@@ -19,7 +19,7 @@ const OrderList = () => {
       {error && <Error error="Admin Order req fail" />}
       <Table striped bordered hover>
         <thead>
-          <tr>
+          <tr style={{color: "#FFC529"}}>
             <th>Order Id</th>
             <th>Email</th>
             <th>User ID</th>
@@ -32,12 +32,12 @@ const OrderList = () => {
           {orders &&
             orders.map((order) => (
               <tr key={order._id}>
-                <td>{order._id}</td>
-                <td>{order.email}</td>
-                <td>{order.transactionId}</td>
-                <td>Rs {order.orderAmount}/-</td>
-                <td>{order.createdAt.substring(0, 10)}</td>
-                <td>
+                <td style={{color: "#FFC529"}}>{order._id}</td>
+                <td style={{color: "#FFC529"}}>{order.email}</td>
+                <td style={{color: "#FFC529"}}>{order.transactionId}</td>
+                <td style={{color: "#FFC529"}}>Rs {order.orderAmount}/-</td>
+                <td style={{color: "#FFC529"}}>{order.createdAt.substring(0, 10)}</td>
+                <td style={{color: "#FFC529"}}>
                   {" "}
                   {order.isDelivered ? (
                     <h6 className="text-success">Delivered</h6>

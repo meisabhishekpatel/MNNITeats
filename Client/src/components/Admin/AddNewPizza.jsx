@@ -35,19 +35,19 @@ const AddNewPizza = () => {
       {loading && (<Loader />)}
       {error && (<Error error="add new item error" />)}
       {success && (<Success success="item added" />)}
-      <Form onSubmit={submitForm} className="bg-light p-4">
+      <Form onSubmit={submitForm}  >
         <Row className="mb-3">
-          <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>Name</Form.Label>
-            <Form.Control type="text"
+          <Form.Group as={Col} controlId="formGridEmail" >
+            <Form.Label style={{color: "#FFC529"}}>Name</Form.Label>
+            <Form.Control style={{backgroundColor: "black"}} type="text"
               value={name}
               onChange={e => setname(e.target.value)}
               placeholder="Enter Name" />
           </Form.Group>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>Small Price</Form.Label>
-              <Form.Control
+              <Form.Label style={{color: "#FFC529"}}>Small Price</Form.Label>
+              <Form.Control style={{backgroundColor: "black"}}
                 type="text"
                 value={smallPrice}
                 onChange={e => setsmallPrice(e.target.value)}
@@ -55,8 +55,8 @@ const AddNewPizza = () => {
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridState">
-              <Form.Label>Medium Price</Form.Label>
-              <Form.Control
+              <Form.Label style={{color: "#FFC529"}}>Medium Price</Form.Label>
+              <Form.Control style={{backgroundColor: "black"}}
                 type="text"
                 value={mediumPrice}
                 onChange={e => setmediumPrice(e.target.value)}
@@ -64,8 +64,8 @@ const AddNewPizza = () => {
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label>Large Price</Form.Label>
-              <Form.Control
+              <Form.Label style={{color: "#FFC529"}}>Large Price</Form.Label>
+              <Form.Control style={{backgroundColor: "black"}}
                 type="text"
                 value={largePrice}
                 onChange={e => setlargePrice(e.target.value)}
@@ -74,8 +74,8 @@ const AddNewPizza = () => {
           </Row>
 
           <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Label>Image</Form.Label>
-            <Form.Control
+            <Form.Label style={{color: "#FFC529"}}>Image</Form.Label>
+            <Form.Control style={{backgroundColor: "black"}}
               type="text"
               value={image}
               onChange={e => setimage(e.target.value)}
@@ -84,16 +84,16 @@ const AddNewPizza = () => {
         </Row>
 
         <Form.Group className="mb-3" controlId="formGridAddress1">
-          <Form.Label>Description</Form.Label>
-          <Form.Control
+          <Form.Label style={{color: "#FFC529"}}>Description</Form.Label>
+          <Form.Control style={{backgroundColor: "black"}}
             type="text"
             value={description}
             onChange={e => setdescription(e.target.value)}
             placeholder="Enter Description" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGridAddress1">
-          <Form.Label>Store</Form.Label>
-          <Form.Control
+          <Form.Label style={{color: "#FFC529"}}>Store</Form.Label>
+          <Form.Control style={{backgroundColor: "black"}}
             type="text"
             value={store}
             onChange={e => setstore(e.target.value)}
@@ -101,15 +101,15 @@ const AddNewPizza = () => {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formGridAddress2">
-          <Form.Label>Category</Form.Label>
-          <Form.Control
+          <Form.Label style={{color: "#FFC529"}}>Category</Form.Label>
+          <Form.Control style={{backgroundColor: "black"}}
             type="text"
             value={category}
             onChange={e => setcategory(e.target.value)}
             placeholder="Enter Category" />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" style={{color: "#FFC529", backgroundColor: "black"}}>
           Add New
         </Button>
       </Form>

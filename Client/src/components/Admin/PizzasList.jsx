@@ -22,7 +22,7 @@ const PizzasList = () => {
             <div>
               <Table striped bordered hover>
                 <thead>
-                  <tr>
+                  <tr style={{color: "#FFC529"}}>
                     <th>S/n</th>
                     <th>Pizza Name</th>
                     <th>Prices</th>
@@ -36,15 +36,15 @@ const PizzasList = () => {
                     pizzas && pizzas.map(pizza => (
                       <tr>
                         <td><img src={pizza.image} alt="logo" width="100px" height="100px" /></td>
-                        <td>{pizza.name}</td>
-                        <td>Small : {pizza.prices[0]["small"]}
+                        <td style={{color: "#FFC529"}}>{pizza.name}</td>
+                        <td style={{color: "#FFC529"}}>Small : {pizza.prices[0]["small"]}
                           <br />
                           Medium : {pizza.prices[0]["medium"]}
                           <br />
                           Large : {pizza.prices[0]["large"]}
                         </td>
-                        <td>{pizza.category}</td>
-                        <td>{pizza.store}</td>
+                        <td style={{color: "#FFC529"}}>{pizza.category}</td>
+                        <td style={{color: "#FFC529"}}>{pizza.store}</td>
                         <td>
                           <Link to={`/admin/editpizza/${pizza._id}`}>
                             <AiFillEdit style={{ cursor: 'pointer' }} />

@@ -21,20 +21,20 @@ const UserList = () => {
       {error && (<Error error="Error while fetching users" />)}
       <Table striped bordered hover>
         <thead>
-          <tr>
+          <tr style={{color: "#FFC529"}}>
             <th>USER ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Delete</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody style={{color: "#FFC529"}}>
           {users &&
             users.map((user) => (
               <tr key={user._id}>
-                <td>{user._id}</td>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
+                <td style={{color: "#FFC529"}}>{user._id}</td>
+                <td style={{color: "#FFC529"}}>{user.name}</td>
+                <td style={{color: "#FFC529"}}>{user.email}</td>
                 <td><AiFillDelete
                   style={{ color: 'red', cursor: 'pointer' }}
                   onClick={() => {
