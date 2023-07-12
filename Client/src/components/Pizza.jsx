@@ -20,10 +20,9 @@ const Pizza = ({ pizza }) => {
     return (
         <div>
             <Card style={{ width: '18rem', marginTop: '30px', border: "solid #FFC529"}}>
-                <Card.Img
+                <Card.Img style={{cursor: "pointer"}}
                     variant="top"
                     src={pizza.image}
-                    style={{ cursor: "pointer" }}
                     onClick={handleShow} />
                 <Card.Body>
                     <Card.Title style={{ color: "#FFC529", textAlign: "center", paddingBottom: "5px", fontSize: "20px", fontFamily: "cursive", fontWeight: "bold"}}>{pizza.name}</Card.Title>
@@ -73,21 +72,21 @@ const Pizza = ({ pizza }) => {
 
             {/* modal */}
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>{pizza.name}</Modal.Title>
+                <Modal.Header  closeButton>
+                    <Modal.Title style={{ color: "#FFC529", fontFamily: "cursive"}}>{pizza.name}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div>
-                        <Card.Img
+                        <Card.Img 
                             variant="top"
                             src={pizza.image} />
                     </div>
                     <div>
-                        <h5>Description:</h5>
+                        <h5 style={{ color: "#FFC529",   fontFamily: "cursive"}}>Description:</h5>
                         <h6>{pizza.description}</h6>
                     </div>
                     <div>
-                        <h5>Store: {pizza.store}</h5>
+                        <h5 style={{ color: "#FFC529",  fontFamily: "cursive"}}>Store: {pizza.store}</h5>
                     </div>
                 </Modal.Body>
             </Modal>

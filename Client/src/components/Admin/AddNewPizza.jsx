@@ -39,7 +39,7 @@ const AddNewPizza = () => {
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail" >
             <Form.Label style={{color: "#FFC529"}}>Name</Form.Label>
-            <Form.Control style={{backgroundColor: "black"}} type="text"
+            <Form.Control style={{backgroundColor: "black", color:"#FFC529"}} type="text"
               value={name}
               onChange={e => setname(e.target.value)}
               placeholder="Enter Name" />
@@ -47,7 +47,7 @@ const AddNewPizza = () => {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridCity">
               <Form.Label style={{color: "#FFC529"}}>Small Price</Form.Label>
-              <Form.Control style={{backgroundColor: "black"}}
+              <Form.Control style={{backgroundColor: "black", color:"#FFC529"}}
                 type="text"
                 value={smallPrice}
                 onChange={e => setsmallPrice(e.target.value)}
@@ -56,7 +56,7 @@ const AddNewPizza = () => {
 
             <Form.Group as={Col} controlId="formGridState">
               <Form.Label style={{color: "#FFC529"}}>Medium Price</Form.Label>
-              <Form.Control style={{backgroundColor: "black"}}
+              <Form.Control style={{backgroundColor: "black", color:"#FFC529"}}
                 type="text"
                 value={mediumPrice}
                 onChange={e => setmediumPrice(e.target.value)}
@@ -65,7 +65,7 @@ const AddNewPizza = () => {
 
             <Form.Group as={Col} controlId="formGridZip">
               <Form.Label style={{color: "#FFC529"}}>Large Price</Form.Label>
-              <Form.Control style={{backgroundColor: "black"}}
+              <Form.Control style={{backgroundColor: "black", color:"#FFC529"}}
                 type="text"
                 value={largePrice}
                 onChange={e => setlargePrice(e.target.value)}
@@ -75,7 +75,7 @@ const AddNewPizza = () => {
 
           <Form.Group as={Col} controlId="formGridPassword">
             <Form.Label style={{color: "#FFC529"}}>Image</Form.Label>
-            <Form.Control style={{backgroundColor: "black"}}
+            <Form.Control style={{backgroundColor: "black", color:"#FFC529"}}
               type="text"
               value={image}
               onChange={e => setimage(e.target.value)}
@@ -85,7 +85,7 @@ const AddNewPizza = () => {
 
         <Form.Group className="mb-3" controlId="formGridAddress1">
           <Form.Label style={{color: "#FFC529"}}>Description</Form.Label>
-          <Form.Control style={{backgroundColor: "black"}}
+          <Form.Control style={{backgroundColor: "black", color:"#FFC529"}}
             type="text"
             value={description}
             onChange={e => setdescription(e.target.value)}
@@ -93,7 +93,7 @@ const AddNewPizza = () => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGridAddress1">
           <Form.Label style={{color: "#FFC529"}}>Store</Form.Label>
-          <Form.Control style={{backgroundColor: "black"}}
+          <Form.Control style={{backgroundColor: "black", color:"#FFC529"}}
             type="text"
             value={store}
             onChange={e => setstore(e.target.value)}
@@ -102,7 +102,7 @@ const AddNewPizza = () => {
 
         <Form.Group className="mb-3" controlId="formGridAddress2">
           <Form.Label style={{color: "#FFC529"}}>Category</Form.Label>
-          <Form.Control style={{backgroundColor: "black"}}
+          <Form.Control style={{backgroundColor: "black", color:"#FFC529"}}
             type="text"
             value={category}
             onChange={e => setcategory(e.target.value)}
