@@ -38,8 +38,8 @@ const {error,success,loading} = registerState
     <Form>
       <h1>Registration</h1>
       <Form.Group className="mb-3" controlId="formBasicName">
-        <Form.Label>Name</Form.Label>
-        <Form.Control 
+        <Form.Label style={{color: "#FFC529"}}>Name</Form.Label>
+        <Form.Control style={{backgroundColor: "#272D2F", color:"#FFC529"}}
         type="text" 
         placeholder="Enter name" 
         value={name}
@@ -47,8 +47,8 @@ const {error,success,loading} = registerState
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control 
+        <Form.Label style={{color: "#FFC529"}}>Email address</Form.Label>
+        <Form.Control style={{backgroundColor: "#272D2F", color:"#FFC529"}}
         type="email" 
         placeholder="Enter email" 
         value={email}
@@ -59,25 +59,25 @@ const {error,success,loading} = registerState
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control 
+        <Form.Label style={{color: "#FFC529"}}>Password</Form.Label>
+        <Form.Control style={{backgroundColor: "#272D2F", color:"#FFC529"}}
         type="password"
          placeholder="Password" 
          value={password}
         onChange={e => setPassword(e.target.value)}/>
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
-        <Form.Label>Confirm Password</Form.Label>
-        <Form.Control 
+        <Form.Label style={{color: "#FFC529"}}>Confirm Password</Form.Label>
+        <Form.Control style={{backgroundColor: "#272D2F", color:"#FFC529"}}
         type="password" 
-        placeholder="Confirm Password"
+        placeholder ="Confirm Password"
         value={confirmPassword}
         onChange={e => setConfirmPassword(e.target.value)} />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+        <Form.Check style={{backgroundColor: "#272D2F", WebkitTextFillColor: "#FFC529"}} type="checkbox" label="Check me out" />
       </Form.Group>
-      <Button variant="primary"
+      <Button style={{backgroundColor: "#272D2F", WebkitTextFillColor: "#FFC529", borderColor: "#FFC529"}} variant="primary"
         onClick={registerHandler}>
         Register
       </Button>

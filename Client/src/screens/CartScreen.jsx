@@ -16,18 +16,18 @@ const CartScreen = () => {
             <Container>
                 <Row>
                     <Col md={6}>
-                        <h1>My Cart</h1>
+                        <h1 style={{ textAlign: "center",  fontFamily: "cursive",  paddingBottom:"10px"}}>My Cart</h1>
                         <Row>
                             {
                                 cartItems.map((item) => (
                                     <>
                                         <Col md={7}>
-                                            <h5>{item.name} [{item.variant}]</h5>
-                                            <h6>
+                                            <h5 style={{ textAlign: "center",  fontFamily: "cursive",  paddingBottom:"10px"}}>{item.name} ({item.variant})</h5>
+                                            <h6 style={{ textAlign: "center",  fontFamily: "cursive",  paddingBottom:"10px"}}>
                                                 {" "}
                                                 Price : {item.quantity} X {item.prices[0][item.variant]} ={" "}{item.price}
                                             </h6>
-                                            <h6>Quantity :&nbsp;
+                                            <h6 style={{ textAlign: "center",  fontFamily: "cursive",  paddingBottom:"10px"}}>Quantity :&nbsp;
 
                                                 <FaMinusSquare
                                                     className="text-danger"
@@ -60,9 +60,9 @@ const CartScreen = () => {
                         </Row>
                     </Col>
                     <Col md={4}>
-                        <h1>Payment</h1>
-                        <h4>SubTotal:</h4>
-                        <h4>RS {subTotal} </h4>
+                        <h1 style={{ textAlign: "center",  fontFamily: "cursive",  paddingBottom:"10px"}}>Payment</h1>
+                        <h4 style={{ color: "#FFC529", textAlign: "center",  fontFamily: "cursive", paddingBottom:"10px"}}>SubTotal : </h4>
+                        <p style={{ textAlign: "center",  fontFamily: "cursive",  paddingBottom:"10px"}}>RS {subTotal} </p>
                         <Checkout subTotal={subTotal}/>
                     </Col>
                 </Row>

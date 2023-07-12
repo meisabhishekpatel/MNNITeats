@@ -22,21 +22,21 @@ const Login =() => {
     <Container>
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email"  value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" />
+        <Form.Label style={{color: "#FFC529"}}>Email address</Form.Label>
+        <Form.Control style={{backgroundColor: "#272D2F", color:"#FFC529"}} type="email"  value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" />
         <Form.Text className="text-muted">
           We'll never share your email with anyone else.
         </Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" value={password} onChange={(p) => setPassword(p.target.value)} placeholder="Password" />
+        <Form.Label style={{color: "#FFC529"}}>Password</Form.Label>
+        <Form.Control style={{backgroundColor: "#272D2F", color:"#FFC529"}} type="password" value={password} onChange={(p) => setPassword(p.target.value)} placeholder="Password" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+        <Form.Check style={{color: "#FFC529"}} type="checkbox" label="Check me out" />
       </Form.Group>
-      <Button variant="primary"  onClick={loginHandler}>
+      <Button style={{backgroundColor: "#272D2F", WebkitTextFillColor: "#FFC529", borderColor: "#FFC529"}} variant="primary"  onClick={loginHandler}>
         Submit
       </Button>
     </Form>

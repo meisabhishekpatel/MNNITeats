@@ -15,7 +15,7 @@ function NavBar() {
         <Navbar collapseOnSelect expand="lg" variant="dark">
             <Container >
                 <Navbar.Brand href="/">
-                    <Image src='/images/logo2.png' style={{height : "100px", paddingLeft: "20px", paddingTop: "2px"}} />
+                    <Image src='/images/logo3.png' style={{height : "100px", paddingLeft: "20px", paddingTop: "2px"}} />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
