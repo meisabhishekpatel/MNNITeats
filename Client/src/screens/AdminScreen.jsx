@@ -25,12 +25,12 @@ const AdminScreen = () => {
         <Row>
           <h1 className="text-center bg-dark text-light p-2">Admin Panel</h1>
           <Col md={2}>
-            <ButtonGroup vertical style={{ minHeight: "400px" }}>
-              <Button onClick={() => navigate('/admin/userlist')}>All Users</Button>
-              <Button onClick={() => navigate('/admin/pizzalist')}>All Pizzas</Button>
+            <ButtonGroup vertical style={{ minHeight: "300px" }}>
+              <Button style = {{WebkitTextFillColor:"black", backgroundColor: "#FFC529", border:"0px", borderRadius: "5px", marginBottom: "10px", marginTop: "10px"}}onClick={() => navigate('/admin/userlist')}>All Users</Button>
+              <Button style = {{WebkitTextFillColor:"black", backgroundColor: "#FFC529", border:"0px", borderRadius: "5px", marginBottom: "10px", marginTop: "10px"}}onClick={() => navigate('/admin/pizzalist')}>All Pizzas</Button>
 
-              <Button onClick={() => navigate('/admin/addnewpizza')}>Add New Pizza</Button>
-              <Button onClick={() => navigate('/admin/orderlist')}>All Orders</Button>
+              <Button style = {{WebkitTextFillColor:"black", backgroundColor: "#FFC529", border:"0px", borderRadius: "5px", marginBottom: "10px", marginTop: "10px"}}onClick={() => navigate('/admin/addnewpizza')}>Add New Pizza</Button>
+              <Button style = {{WebkitTextFillColor:"black", backgroundColor: "#FFC529", border:"0px", borderRadius: "5px", marginBottom: "10px", marginTop: "10px"}}onClick={() => navigate('/admin/orderlist')}>All Orders</Button>
             </ButtonGroup>
           </Col>
           <Col md={10}>

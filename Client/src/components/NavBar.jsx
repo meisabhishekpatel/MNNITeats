@@ -19,7 +19,7 @@ function NavBar() {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mx-auto" style={{border: "2px", borderColor: "#FFC529"}}>
+                    <Nav className="mx-auto">
                     <Nav.Link href="/" activeClassName="active"style={{ color: "#FFC529", fontSize: "16px",fontFamily: "cursive", fontWeight: "bold", paddingLeft: "30px", paddingRight:"30px"}}  >Home</Nav.Link>
                         <Nav.Link href="/about" activeClassName="active" style={{ color: "#FFC529", fontSize: "16px",fontFamily: "cursive", fontWeight: "bold", paddingLeft: "30px", paddingRight:"30px", paddingTop: "10px", paddingBottom: "30px"}}>About Us</Nav.Link>
                         <Nav.Link href="#action/3.1" activeClassName="active" style={{ color: "#FFC529", fontSize: "16px",fontFamily: "cursive", fontWeight: "bold", paddingLeft: "30px", paddingRight:"30px"}}>Action</Nav.Link>
